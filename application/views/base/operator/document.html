@@ -14,32 +14,40 @@
     <!-- other style -->
 </head>
 <!-- body -->
-<body class="hold-transition skin-green-light sidebar-mini">
+<body class="hold-transition skin-green-light layout-top-nav">
     <!-- load javascript -->
     {$LOAD_JAVASCRIPT}
     <!-- end of javascript	-->
     <!-- layout -->
     <div class="wrapper">
         <header class="main-header">
-            <!-- Logo -->
-            <a href="index2.html" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>CS</b>3.1</span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>CI</b>smart 3.1</span>
-            </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown user user-menu">
+			<nav class="navbar navbar-static-top">
+			  <div class="container">
+				<div class="navbar-header">
+				  <a href="index2.html" class="logo">
+					<!-- mini logo for sidebar mini 50x50 pixels -->
+					<span class="logo-mini"><b>CS</b>3.1</span>
+					<!-- logo for regular state and mobile devices -->
+					<span class="logo-lg"><b>CI</b>smart 3.1</span>
+				</a>
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+					<i class="fa fa-bars"></i>
+				  </button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					{include file="$template_sidebar"}
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+						</div>
+					</form>
+					<ul class="nav navbar-nav pull-right">
+						<!-- User Account Menu -->
+						<li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="{$BASEURL}/resource/doc/images/icon/user-image.png" class="user-image" alt="User Image">
-                                <span class="hidden-xs">{$com_user.user_name|upper}</span>
+                                <span class="hidden-xs">Selamat Datang <b>{$com_user.user_name|upper}</b></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -49,18 +57,6 @@
                                         {$com_user.user_name|upper}
                                         <small>Member since Nov. 2012</small>
                                     </p>
-                                </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
@@ -73,39 +69,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- Control Sidebar Toggle Button -->
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="{$BASEURL}/resource/doc/images/icon/user-image.png" class="img-circle" alt="User Image">
-                    </div>
-                    <div class="pull-left info">
-                        <p>{$com_user.user_name|upper}</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
-                <!-- search form -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-                <!-- /.search form -->
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                {include file="$template_sidebar"}
-            </section>
-        </aside>
+					</ul>
+				</div>
+				<!-- /.navbar-custom-menu -->
+			  </div>
+			  <!-- /.container-fluid -->
+			</nav>
+		</header>
         <div class="content-wrapper">
             {include file="$template_content"}
         </div>

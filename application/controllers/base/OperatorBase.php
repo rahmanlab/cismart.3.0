@@ -183,17 +183,21 @@ class ApplicationBase extends CI_Controller {
                 $treeview = "";
                 if (!empty($child)) {
                     $url_parent = '#';
-                    $arrow = '<i class="fa fa-angle-left pull-right"></i>';
-                    $treeview = "treeview ";
-                }
+                    $arrow = '<i class="fa fa-sort-down pull-right"></i>';
+                    $treeview = "dropdown "; 
+					$linkHtml = '<a href="' . $url_parent . '" class="dropdown-toggle" data-toggle="dropdown"><i class="fa '.$rec['nav_icon'].'"></i><span>' . $rec['nav_title'] .'</span>'. $arrow . '</a>';; 
+				}else if(empty($child)){
+					$linkHtml = '<a href="' . $url_parent . '"><i class="fa '.$rec['nav_icon'].'"></i><span>' . $rec['nav_title'] .'</span>'. $arrow . '</a>';; 
+					
+				}
                 // parent active
                 if ($this->parent_selected == $rec['nav_id']) {
                     $treeview .= "active";
                 }
                 // data
                 $html .= '<li class="'.$treeview.'">';
-                $html .= '<a href="' . $url_parent . '"><i class="fa '.$rec['nav_icon'].'"></i><span>' . $rec['nav_title'] .'</span>'. $arrow . '</a>';
-                $html .= $child;
+                $html .= $linkHtml;
+				$html .= $child;
                 $html .= '</li>';
             }
         }
@@ -214,12 +218,12 @@ class ApplicationBase extends CI_Controller {
         $params = array($this->portal_id, $this->com_user['role_id'], $this->com_user['user_id'], $parent_id);
         $rs_id = $this->m_site->get_navigation_user_by_parent($params);
         if ($rs_id) {
-            $html = '<ul class="treeview-menu">';
+            $html = '<ul class="dropdown-menu" role="menu">';
             foreach ($rs_id as $rec) {
                 // selected
                 $selected = ($rec['nav_id'] == $parent_selected) ? "class='active'" : "";
                 // parse
-                $html .= '<li '.$selected.'>';
+                $html .= '<li>';
                 $html .= '<a href="' . site_url($rec['nav_url']) . '" >';
                 $html .= $rec['nav_title'];
                 $html .= '</a>';
