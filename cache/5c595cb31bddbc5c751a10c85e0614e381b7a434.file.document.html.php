@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2018-02-11 01:53:17
+<?php /* Smarty version Smarty-3.0.7, created on 2018-02-12 10:47:39
          compiled from "application/views\base/operator/document.html" */ ?>
-<?php /*%%SmartyHeaderCode:10672573d6485bcde01-96909666%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:267525a8162bbac7762-37385894%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5c595cb31bddbc5c751a10c85e0614e381b7a434' => 
     array (
       0 => 'application/views\\base/operator/document.html',
-      1 => 1463640988,
+      1 => 1518428832,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10672573d6485bcde01-96909666',
+  'nocache_hash' => '267525a8162bbac7762-37385894',
   'function' => 
   array (
   ),
@@ -40,7 +40,7 @@ $_smarty_tpl->decodeProperties(array (
     <!-- other style -->
 </head>
 <!-- body -->
-<body class="hold-transition skin-green-light sidebar-mini">
+<body class="hold-transition skin-green-light layout-top-nav">
     <!-- load javascript -->
     <?php echo $_smarty_tpl->getVariable('LOAD_JAVASCRIPT')->value;?>
 
@@ -48,27 +48,36 @@ $_smarty_tpl->decodeProperties(array (
     <!-- layout -->
     <div class="wrapper">
         <header class="main-header">
-            <!-- Logo -->
-            <a href="index2.html" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>CS</b>3.1</span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>CI</b>smart 3.1</span>
-            </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown user user-menu">
+			<nav class="navbar navbar-static-top">
+			  <div class="container">
+				<div class="navbar-header">
+				  <a href="index2.html" class="logo">
+					<!-- mini logo for sidebar mini 50x50 pixels -->
+					<span class="logo-mini"><b>CS</b>3.1</span>
+					<!-- logo for regular state and mobile devices -->
+					<span class="logo-lg"><b>CI</b>smart 3.1</span>
+				</a>
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+					<i class="fa fa-bars"></i>
+				  </button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<?php $_template = new Smarty_Internal_Template(($_smarty_tpl->getVariable('template_sidebar')->value), $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+						</div>
+					</form>
+					<ul class="nav navbar-nav pull-right">
+						<!-- User Account Menu -->
+						<li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?php echo $_smarty_tpl->getVariable('BASEURL')->value;?>
 /resource/doc/images/icon/user-image.png" class="user-image" alt="User Image">
-                                <span class="hidden-xs"><?php echo ((mb_detect_encoding($_smarty_tpl->getVariable('com_user')->value['user_name'], 'UTF-8, ISO-8859-1') === 'UTF-8') ? mb_strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name'],SMARTY_RESOURCE_CHAR_SET) : strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name']));?>
-</span>
+                                <span class="hidden-xs">Selamat Datang <b><?php echo ((mb_detect_encoding($_smarty_tpl->getVariable('com_user')->value['user_name'], 'UTF-8, ISO-8859-1') === 'UTF-8') ? mb_strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name'],SMARTY_RESOURCE_CHAR_SET) : strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name']));?>
+</b></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -80,18 +89,6 @@ $_smarty_tpl->decodeProperties(array (
 
                                         <small>Member since Nov. 2012</small>
                                     </p>
-                                </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
@@ -105,42 +102,13 @@ $_smarty_tpl->decodeProperties(array (
                                 </li>
                             </ul>
                         </li>
-                        <!-- Control Sidebar Toggle Button -->
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="<?php echo $_smarty_tpl->getVariable('BASEURL')->value;?>
-/resource/doc/images/icon/user-image.png" class="img-circle" alt="User Image">
-                    </div>
-                    <div class="pull-left info">
-                        <p><?php echo ((mb_detect_encoding($_smarty_tpl->getVariable('com_user')->value['user_name'], 'UTF-8, ISO-8859-1') === 'UTF-8') ? mb_strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name'],SMARTY_RESOURCE_CHAR_SET) : strtoupper($_smarty_tpl->getVariable('com_user')->value['user_name']));?>
-</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
-                <!-- search form -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-                <!-- /.search form -->
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                <?php $_template = new Smarty_Internal_Template(($_smarty_tpl->getVariable('template_sidebar')->value), $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-            </section>
-        </aside>
+					</ul>
+				</div>
+				<!-- /.navbar-custom-menu -->
+			  </div>
+			  <!-- /.container-fluid -->
+			</nav>
+		</header>
         <div class="content-wrapper">
             <?php $_template = new Smarty_Internal_Template(($_smarty_tpl->getVariable('template_content')->value), $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
@@ -151,11 +119,90 @@ $_smarty_tpl->decodeProperties(array (
         <div class="pull-right hidden-xs">
             <b>Version</b> 3.1
         </div>
-        <strong>Copyright © 2016 <a target="_blank" href="http://te.net.id">PT. Time Excelindo</a>.</strong>
+        <strong>Copyright © 2018 <a target="_blank" href="http://pragmainf.co.id">PT. Pragma Informatika</a>.</strong>
     </footer>
 </div>
 <!-- /#wrapper -->
 <!-- end of layout	-->
+<script>
+	$(document).ready(function(){
+		
+	});
+  $(function (){
+   
+    /*
+     * LINE CHART
+     * ----------
+     */
+    //LINE randomly generated data
+
+    var sin = [], cos = [];
+    for (var i = 0; i < 14; i += 0.5) {
+      sin.push([i, Math.sin(i)]);
+      cos.push([i, Math.cos(i)]);
+    }
+    var line_data1 = {
+      data: sin,
+      color: "#3c8dbc"
+    };
+    var line_data2 = {
+      data: cos,
+      color: "#00c0ef"
+    };
+    $.plot("#line-chart", [line_data1, line_data2], {
+      grid: {
+        hoverable: true,
+        borderColor: "#f3f3f3",
+        borderWidth: 1,
+        tickColor: "#f3f3f3"
+      },
+      series: {
+        shadowSize: 0,
+        lines: {
+          show: true
+        },
+        points: {
+          show: true
+        }
+      },
+      lines: {
+        fill: false,
+        color: ["#3c8dbc", "#f56954"]
+      },
+      yaxis: {
+        show: true,
+      },
+      xaxis: {
+        show: true
+      }
+    });
+    //Initialize tooltip on hover
+    $('<div class="tooltip-inner" id="line-chart-tooltip"></div>').css({
+      position: "absolute",
+      display: "none",
+      opacity: 0.8
+    }).appendTo("body");
+    $("#line-chart").bind("plothover", function (event, pos, item) {
+
+      if (item) {
+        var x = item.datapoint[0].toFixed(2),
+            y = item.datapoint[1].toFixed(2);
+
+        $("#line-chart-tooltip").html(item.series.label + " of " + x + " = " + y)
+            .css({
+				top: item.pageY + 5, 
+				left: item.pageX + 5
+			})
+            .fadeIn(200);
+      } else {
+        $("#line-chart-tooltip").hide();
+      }
+
+    });
+    /* END LINE CHART */
+
+  });
+</script>
 </body>
 <!-- end body -->
 </html>
