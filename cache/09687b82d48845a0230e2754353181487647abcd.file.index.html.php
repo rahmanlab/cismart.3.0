@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2018-02-12 13:24:17
+<?php /* Smarty version Smarty-3.0.7, created on 2018-02-13 04:29:38
          compiled from "application/views\operator/welcome/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:282945a818771cb3d66-03613443%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102605a825ba293ddd5-24405158%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '09687b82d48845a0230e2754353181487647abcd' => 
     array (
       0 => 'application/views\\operator/welcome/index.html',
-      1 => 1518438256,
+      1 => 1518492574,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '282945a818771cb3d66-03613443',
+  'nocache_hash' => '102605a825ba293ddd5-24405158',
   'function' => 
   array (
   ),
@@ -191,23 +191,25 @@ $_smarty_tpl->decodeProperties(array (
 								</div>
 						</div>
 						<div class="panel-body" style="padding-top:0px;">
-							<table class="table table-hover">
-							  
-							  <tbody>
-								<tr>
-								  <td>Otto</td>
-								  <td><span class="label label-success ">Open</span></td>
-								</tr>
-								<tr>
-								  <td>Thornton</td>
-								  <td><span class="label label-danger ">Close</span></td>
-								</tr>
-								<tr>
-								  <td>Larry the Bird</td>
-								  <td><span class="label label-danger ">Close</span></td>
-								</tr>
-							  </tbody>
-							</table>
+							<div class="table-responsive">
+								<table class="table table-hover">
+								  
+								  <tbody>
+									<tr>
+									  <td>BUPATI-SEKADAU</td>
+									  <td><span class="label label-success ">Open</span></td>
+									</tr>
+									<tr>
+									  <td>BUPATI-SEKADAU</td>
+									  <td><span class="label label-danger ">Close</span></td>
+									</tr>
+									<tr>
+									  <td>BIKA-PUTUSSIBAU</td>
+									  <td><span class="label label-danger ">Close</span></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
 						</div>
 						<!-- /.panel-body -->
 					</div>

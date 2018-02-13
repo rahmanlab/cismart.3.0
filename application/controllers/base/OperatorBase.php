@@ -30,7 +30,7 @@ class ApplicationBase extends CI_Controller {
         $this->smarty->load_themes("adminlte");
         // load base models
         // load css
-        $this->smarty->load_style("adminlte/plugins/bootstrap/bootstrap.min.css");
+        $this->smarty->load_style("adminlte/plugins/bootstrap/backup_bootstrap.min.css");
         $this->smarty->load_style("adminlte/plugins/font-awesome/css/font-awesome.min.css");
         $this->smarty->load_style("adminlte/plugins/ionicons/css/ionicons.css");
         $this->smarty->load_style("adminlte/plugins/metismenu/css/metisMenu.min.css");
